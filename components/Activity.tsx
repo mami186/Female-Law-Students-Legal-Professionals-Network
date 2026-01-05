@@ -6,7 +6,7 @@ const Activity = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h3 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-4">
-            Key Activities
+            Recent Activities
           </h3>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Our impactful programs and initiatives

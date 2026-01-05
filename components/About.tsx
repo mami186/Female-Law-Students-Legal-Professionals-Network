@@ -1,43 +1,43 @@
-import { Form, GraduationCap, Handshake, Megaphone, Star } from "lucide-react";
+import { GraduationCap, Handshake, Megaphone, Star } from "lucide-react";
 
 const About = () => {
   return (
-    <>
-      <div className="flex flex-row  container mx-auto max-w-6xl">
-        <div className="text-center mx-12">
-          <h3 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-6">
+    <section className="bg-background text-foreground py-20">
+      <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row gap-16">
+
+        {/* About Section */}
+        <div className="text-center lg:text-left flex-1">
+          <h3 className="font-serif text-4xl md:text-5xl font-semibold mb-6">
             About Us
           </h3>
-          <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+
+          <p className="leading-relaxed text-foreground/70 max-w-3xl mx-auto lg:mx-0">
             The Female Law Students and Legal Professionals Network, Haramaya
             University Chapter, was officially established in{" "}
-            <strong>October 2021</strong> by Ms. Zebiba Musemma, with the
-            support of Ms. Urji Biso, Bethlehem, Dr. Richard, and the College of
-            Law at Haramaya University.
+            <strong className="text-foreground">October 2021</strong> by Ms.
+            Zebiba Musemma, with the support of Ms. Urji Biso, Bethlehem, Dr.
+            Richard, and the College of Law at Haramaya University.
           </p>
-          <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-4">
+
+          <p className="leading-relaxed text-foreground/70 max-w-3xl mx-auto lg:mx-0 mt-4">
             The Network is a student-led initiative dedicated to empowering
-            female law students and young legal professionals. It provides
-            mentorship, advocacy programs, leadership opportunities, and
-            professional development activities to address the challenges women
-            face in the legal field.
+            female law students and young legal professionals through
+            mentorship, advocacy, leadership, and professional development.
           </p>
-          <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-4">
-            Although the Network has faced various challenges over time, it has
-            continued to grow and thrive. In 2025, the Network is being
-            relaunched with a range of impactful activities.
+
+          <p className="leading-relaxed text-foreground/70 max-w-3xl mx-auto lg:mx-0 mt-4">
+            In 2025, the Network is being relaunched with a range of impactful
+            activities.
           </p>
         </div>
 
-        <div>
-          <div className="container mx-12 max-w-6xl">
-            <div className="text-center">
-              <h3 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-4">
-                Our Goals
-              </h3>
-            </div>
+        {/* Goals Section */}
+        <div className="flex-1">
+          <h3 className="font-serif text-4xl md:text-5xl font-semibold text-center mb-10">
+            Our Goals
+          </h3>
 
-            <div className="grid md:grid-cols-2 gap-6"></div>
+          <div className="grid md:grid-cols-2 gap-6">
             {[
               {
                 icon: GraduationCap,
@@ -58,18 +58,22 @@ const About = () => {
             ].map((goal, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-6 bg-background rounded-xl border border-border"
+                className="flex items-start gap-4 p-6 rounded-xl border border-foreground/20 bg-background"
               >
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
                   <goal.icon className="w-5 h-5 text-primary" />
                 </div>
-                <p className="text-foreground">{goal.text}</p>
+
+                <p className="text-foreground/80 leading-relaxed">
+                  {goal.text}
+                </p>
               </div>
             ))}
           </div>
         </div>
+
       </div>
-    </>
+    </section>
   );
 };
 
