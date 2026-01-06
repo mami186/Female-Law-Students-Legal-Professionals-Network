@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 
@@ -52,34 +52,54 @@ const Header = () => {
               />
             </div>
             <h1 className="font-serif text-xl font-semibold text-primary">
-              FLSN
+              FLSLPN
             </h1>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a
+            <Link
               href="#about"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              scroll={false}
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="#activities"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              scroll={false}
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#activities')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Activities
-            </a>
-            <a
+            </Link>
+            <Link
               href="#team"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              scroll={false}
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#team')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Team
-            </a>
-            <a
+            </Link>
+            <Link
               href="#join"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              scroll={false}
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#join')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Join
-            </a>
+            </Link>
           </div>
           <button
             onClick={toggleTheme}

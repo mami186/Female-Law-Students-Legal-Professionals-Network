@@ -14,19 +14,19 @@ export default function Home() {
 
         <Hero />
 
-        <section id="about" className="py-24 px-6 bg-background">
+        <section id="about" className="py-24 px-6 bg-background ">
           <About />
         </section>
 
-        <section id="activities" className="py-24 px-6 bg-background">
+        <section id="activities" className="py-24 px-6 bg-background ">
           <Activity />
         </section>
 
-        <section id="team" className="py-24 px-6 bg-background">
+        <section id="team" className="py-24 px-6 bg-background ">
           <Team />
         </section>
 
-        <section className="py-24 px-6 bg-background">
+        <section id="join" className="py-24 px-6 bg-background ">
           <Form />
         </section>
 
