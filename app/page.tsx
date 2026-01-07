@@ -18,7 +18,7 @@ export default function Home() {
           <About />
         </section>
 
-        <section id="activities" className="py-24 px-6 bg-background ">
+        <section id="activities" className="py-24 px-6 bg-white ">
           <Activity />
         </section>
 
@@ -26,11 +26,13 @@ export default function Home() {
           <Team />
         </section>
 
-        <section id="join" className="py-24 px-6 bg-background ">
+        <section id="join" className="py-24 px-6 bg-background_2 ">
           <Form />
         </section>
 
-        <Footer />
+        <section className=" text-Ptext dark:text-Ptext bg-bgbd  ">
+          <Footer />
+        </section>
       </div>
     </>
   );

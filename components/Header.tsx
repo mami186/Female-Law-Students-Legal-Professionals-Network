@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm bg-purple-950/10 dark:bg-purple-950/10 border-b border-border">
         <div className="container mx-auto px-6 py-2 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div>
@@ -62,7 +62,9 @@ const Header = () => {
               scroll={false}
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+                document
+                  .querySelector("#about")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               About
@@ -73,7 +75,9 @@ const Header = () => {
               scroll={false}
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector('#activities')?.scrollIntoView({ behavior: 'smooth' });
+                document
+                  .querySelector("#activities")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               Activities
@@ -84,7 +88,9 @@ const Header = () => {
               scroll={false}
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector('#team')?.scrollIntoView({ behavior: 'smooth' });
+                document
+                  .querySelector("#team")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               Team
@@ -95,7 +101,9 @@ const Header = () => {
               scroll={false}
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector('#join')?.scrollIntoView({ behavior: 'smooth' });
+                document
+                  .querySelector("#join")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               Join

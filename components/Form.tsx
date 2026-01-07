@@ -5,7 +5,7 @@ const Form = () => {
     <div className="container mx-auto max-w-6xl">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h3 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-6">
+          <h3 className="font-serif text-4xl md:text-5xl text-center md:text-center lg:text-left font-semibold text-foreground mb-6">
             Ready to Join?
           </h3>
           <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -13,7 +13,7 @@ const Form = () => {
             professionals who want to grow academically, professionally, and
             personally.
           </p>
-          <ul className="space-y-3">
+          <ul className="space-y-3 md:px-8">
             {[
               "Female law students at Haramaya University",
               "Young legal professionals starting their careers",

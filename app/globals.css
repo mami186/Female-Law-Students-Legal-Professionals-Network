@@ -1,21 +1,33 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
 html {
   scroll-behavior: smooth;
 }
 
-
 @theme {
+  --color-background: var(--background);
+  --color-background_2: var(--background_2);
+  --color-background_3: var(--background_3);
+  --color-white: var(--white);
+  --color-bgbd: var(--bgbd);
+
+  --color-Ptext: var(--Ptext);
+
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-border: var(--border);
   --color-muted-foreground: var(--muted-foreground);
 }
 
-
 :root {
+  --Ptext: #ffffff;
+  --bgbd: #562a81;
+
+  --white: hwb(0 100% 0%);
+  --background: #edebf0;
+  --background_2: #D0CBD8;
+  --background_3: #512c77;
   --foreground: #070606;
   --primary: #562a81;
   --border: #e5e5e5;
@@ -25,40 +37,22 @@ html {
 }
 
 .dark {
-  --foreground: #f4f2f7;
+  --Ptext: #ffffff;
+  --bgbd: #562a81;
+
+  --background: #77698C;
+  --foreground: #ffffff;
   --primary: #562a81;
   --border: #262626;
   --muted-foreground: #a3a3a3;
 
-  --bg-image: url("/bg.jpg")
+  --bg-image: url("/bg.jpg");
 }
 body {
   position: relative;
   min-height: 100vh;
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.6);
-  z-index: 0;
-  pointer-events: none;
-}
 
-.dark body::before {
-  background: rgba(0, 0, 0, 0.6);
-}
-
-body > * {
-  position: relative;
-  z-index: 1;
-}
+  /* --background: #edebf0; */

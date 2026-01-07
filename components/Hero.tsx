@@ -1,15 +1,20 @@
 import React from "react";
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <>
-      <section className="pt-32 pb-20 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="inline-block mb-6 px-4 py-2 bg-primary/10 rounded-full">
-            <span className="text-sm font-medium text-primary">
-              Haramaya University Chapter
-            </span>
-          </div>
+      <section className="relative min-h-screen flex items-center bg-white justify-center px-6 overflow-hidden">
+        {/* Blurred background image layer */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat  blur-s scale-110 -z-20"
+          style={{ backgroundImage: "var(--bg-image)" }}
+        ></div>
+
+        {/* Purple tint overlay */}
+        <div className="absolute inset-0 bg-purple-200/10 dark:bg-purple-950/10 -z-10"></div>
+
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
           <h2 className="font-serif text-4xl md:text-6xl font-semibold text-foreground leading-tight mb-6">
             Female Law Students &
             <span className="text-primary block mt-2">
