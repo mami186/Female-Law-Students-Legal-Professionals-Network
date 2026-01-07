@@ -7,7 +7,7 @@ import { ImLinkedin } from "react-icons/im";
 
 export const Footer = () => {
   return (
-    <footer className="py-6 sm:py-8 md:py-10 px-4 sm:px-6 border-t border-border">
+    <footer className="py-6 sm:py-8 md:py-5 px-4 sm:px-6 border-t border-border">
       <div className="container mx-auto max-w-6xl">
         {/* Top section */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 md:gap-8 items-center">
@@ -114,7 +114,7 @@ export const Footer = () => {
         </div>
 
         {/* Divider */}
-        <hr className="my-6 sm:my-8 border-border" />
+        <hr className="my-4 sm:my-6 border-border" />
 
         {/* Bottom text */}
         <p className="text-xs sm:text-sm text-center md:text-left">

@@ -14,7 +14,7 @@ export default function Home() {
 
         <Hero />
 
-        <section id="about" className="py-24 px-6 bg-background ">
+        <section id="about" className="py-18 px-6 sm:py-8 md:py-12  bg-background ">
           <About />
         </section>
 
@@ -22,11 +22,11 @@ export default function Home() {
           <Activity />
         </section>
 
-        <section id="team" className="py-24 px-6 bg-background ">
+        <section id="team" className="py-24 px-6 lg:pt-18 lg:pb-24 bg-background ">
           <Team />
         </section>
 
-        <section id="join" className="py-24 px-6 bg-background_2 ">
+        <section id="join" className="py-10 px-6 lg:py-18 bg-background_2 ">
           <Form />
         </section>
 

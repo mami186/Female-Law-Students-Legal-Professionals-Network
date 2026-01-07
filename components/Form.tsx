@@ -31,7 +31,7 @@ const Form = () => {
           </ul>
         </div>
 
-        <div className="bg-background/50 backdrop-blur-sm rounded-2xl border border-border p-8">
+        <div className="bg-background/50 backdrop-blur-sm rounded-2xl border border-border px-8 py-5">
           <h3 className="font-serif text-3xl font-semibold text-foreground mb-6 text-center">
             Join us now
           </h3>
