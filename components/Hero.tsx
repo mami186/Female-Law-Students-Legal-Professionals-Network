@@ -17,36 +17,36 @@ const Hero = () => {
         setTimeout(() => {
           content.classList.remove("animate-scale-pulse");
         }, 500);
-      }, 1800);
+      }, 1200);
     }
   };
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-bgsh1">
         {/* Grid layout for background - Desktop: 2fr 1fr, Tablet: 1fr 1fr, Mobile: no grid */}
         <div className="absolute inset-0 hidden lg:grid lg:grid-cols-[1fr_2fr]">
-          <div className="bg-background"></div>
+          <div className="bg-bgsh1"></div>
           <div
             className="bg-cover bg-center relative"
             style={{ backgroundImage: "url(/hero.jpg)" }}
           >
             {/* Gradient overlay on the image area */}
-            <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent via-25% to-transparent"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent via-25% to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-bgsh1 via-transparent via-25% dark:via-50% to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-bgsh1 via-transparent via-25% dark:via-50% to-transparent"></div>
           </div>
         </div>
 
         {/* Tablet view: 1fr 1fr */}
         <div className="absolute inset-0 hidden md:grid md:grid-cols-2 lg:hidden">
-          <div className="bg-background"></div>
+          <div className="bg-bgsh1"></div>
           <div
             className="bg-cover bg-center relative"
             style={{ backgroundImage: "url(/hero.jpg)" }}
           >
             {/* Gradient overlay on the image area */}
-            <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent via-25% to-transparent"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent via-25% to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-bgsh1 via-transparent via-25% dark:via-50% to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-bgsh1 via-transparent via-25% dark:via-50% to-transparent"></div>
           </div>
         </div>
 

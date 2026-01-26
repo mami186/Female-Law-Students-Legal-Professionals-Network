@@ -10,7 +10,7 @@ export const Footer = () => {
     <footer className="py-6 sm:py-8 md:py-5 px-4 sm:px-6 border-t border-border">
       <div className="container mx-auto max-w-6xl">
         {/* Top section */}
-        <div className="section-pulse-target flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 md:gap-8 items-center">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 md:gap-8 items-center">
           {/* Left block - Organization Info */}
           <div className="flex flex-col items-center lg:items-start gap-3 flex-1">
             <p className="font-serif text-base sm:text-lg md:text-xl font-semibold text-center lg:text-left">

@@ -2,7 +2,7 @@ import { GraduationCap, Handshake, Megaphone, Star } from "lucide-react";
 
 const About = () => {
   return (
-    <section className="bg-background dark:background text-foreground ">
+    <section className="text-foreground ">
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row gap-12">
         {/* About Section */}
         <div className="text-center lg:text-left flex-1">
@@ -57,7 +57,7 @@ const About = () => {
             ].map((goal, index) => (
               <div
                 key={index}
-                className="flex items-start gap-2 p-4 rounded-xl border border-foreground/20 bg-white"
+                className="flex items-start gap-2 p-4 rounded-xl border border-foreground/20 bg-bgsh2"
               >
                 <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
                   <goal.icon className="w-5 h-5 text-bgbd" />

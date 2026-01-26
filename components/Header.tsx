@@ -42,23 +42,20 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
 
-      const content =
-        element.querySelector(".section-pulse-target") ||
-        element.querySelector(".container") ||
-        element;
+      const content = element.querySelector(".container") || element;
 
       setTimeout(() => {
         content.classList.add("animate-scale-pulse");
         setTimeout(() => {
           content.classList.remove("animate-scale-pulse");
         }, 500);
-      }, 1800);
+      }, 1200);
     }
   };
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 text-background_3 dark:text-background_3 bg-background/80 backdrop-blur-sm bg-purple-950/10 dark:bg-purple-950/10 border-b border-border animate-slideDown">
+      <nav className="fixed top-0 left-0 right-0 z-50 text-background_3 dark:text-background_3 bg-bgsh1/80 backdrop-blur-sm dark:bg-bgsh1/10 border-b border-border animate-slideDown">
         <div className="container mx-auto px-6 py-2 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div>

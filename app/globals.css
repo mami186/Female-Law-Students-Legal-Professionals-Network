@@ -9,12 +9,16 @@ html {
 
 @theme {
   --color-background: var(--background);
+  --color-bgsh1: var(--bgsh1);
+  --color-bgsh2: var(--bgsh2);
   --color-background_2: var(--background_2);
   --color-background_3: var(--background_3);
   --color-background_4: var(--background_4);
   --color-background_5: var(--background_5);
   --color-background_6: var(--background_6);
   --color-header_1: var(--header_1);
+  --color-footer_1: var(--footer_1);
+
 
 
   --color-white: var(--white);
@@ -28,11 +32,20 @@ html {
   --color-muted-foreground: var(--muted-foreground);
 }
 
+/* Global transition for theme switching */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
 :root {
   --Ptext: #ffffff;
   --bgbd: #562a81;
 
   --white: hwb(0 100% 0%);
+  --bgsh1: #edebf0;
+  --bgsh2: hwb(0 100% 0%);
   --background: #edebf0;
   --background_2: #D0CBD8;
   --background_3: #603986;
@@ -40,6 +53,7 @@ html {
   --background_5: #9963cf;
   --background_6: #603986;
   --header_1: #603986;
+  --footer_1: #562a81;
 
   --foreground: #070606;
   --primary: #562a81;
@@ -52,12 +66,16 @@ html {
 .dark {
   --Ptext: #ffffff;
   --bgbd: #562a81;
+  --bgsh1: #311c46;
+  --bgsh2: #3d2e55;
+  --footer_1: #3d2e55;
+
+
   --background_3: #ffffff;
   --background_4: #7a4baa;
   --background_5: #9963cf;
   --background_6: #603986;
   --header_1: #603986;
-  --background_2: #554b66;
 
   --background: #77698C;
   --foreground: #ffffff;
