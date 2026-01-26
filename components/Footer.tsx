@@ -10,7 +10,7 @@ export const Footer = () => {
     <footer className="py-6 sm:py-8 md:py-5 px-4 sm:px-6 border-t border-border">
       <div className="container mx-auto max-w-6xl">
         {/* Top section */}
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 md:gap-8 items-center">
+        <div className="section-pulse-target flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 md:gap-8 items-center">
           {/* Left block - Organization Info */}
           <div className="flex flex-col items-center lg:items-start gap-3 flex-1">
             <p className="font-serif text-base sm:text-lg md:text-xl font-semibold text-center lg:text-left">
@@ -71,7 +71,7 @@ export const Footer = () => {
             <p className="font-serif text-base sm:text-lg md:text-xl font-semibold text-center lg:text-left">
               Website Developer
             </p>
-            <div className="flex flex-col items-center lg:items-start gap-2 sm:gap-3 border px-4 sm:px-5 py-3 sm:py-4 border-gray-950/30 rounded-2xl bg-background_3 transition-transform duration-200 ease-in-out hover:scale-105 w-full lg:w-auto">
+            <div className="flex flex-col items-center lg:items-start gap-2 sm:gap-3 border px-4 sm:px-5 py-3 sm:py-4 border-gray-950/30 rounded-2xl  transition-transform duration-200 ease-in-out hover:scale-105 w-full lg:w-auto">
               <div className="flex items-center gap-2 sm:gap-3">
                 <div className="border border-border p-3 sm:p-4 md:p-5 rounded-lg flex-shrink-0"></div>
                 <div className="text-center lg:text-left">

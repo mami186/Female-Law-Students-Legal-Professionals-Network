@@ -57,6 +57,7 @@ html {
   --background_5: #9963cf;
   --background_6: #603986;
   --header_1: #603986;
+  --background_2: #554b66;
 
   --background: #77698C;
   --foreground: #ffffff;
@@ -109,5 +110,15 @@ body {
 
   .animate-blurIn {
     animation: blurIn 1s ease-out;
+  }
+
+  @keyframes scalePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  .animate-scale-pulse {
+    animation: scalePulse 0.5s ease-in-out;
   }
 }

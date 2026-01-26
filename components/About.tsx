@@ -60,7 +60,7 @@ const About = () => {
                 className="flex items-start gap-2 p-4 rounded-xl border border-foreground/20 bg-white"
               >
                 <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
-                  <goal.icon className="w-5 h-5 text-primary" />
+                  <goal.icon className="w-5 h-5 text-bgbd" />
                 </div>
 
                 <p className="text-foreground/80 leading-relaxed">

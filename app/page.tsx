@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-background">
-        
         <Header />
 
         <Hero />
@@ -39,7 +38,7 @@ export default function Home() {
 
         <section
           id="join"
-          className="py-10 px-6 lg:py-18 text-background_3 dark:text-background_3 bg-background_2 "
+          className="py-10 px-6 lg:py-18 text-foreground bg-white  "
         >
           <Form />
         </section>

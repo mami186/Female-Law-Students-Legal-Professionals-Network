@@ -1,6 +1,26 @@
+"use client";
 import React from "react";
 
 const Hero = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+
+      const content =
+        element.querySelector(".section-pulse-target") ||
+        element.querySelector(".container") ||
+        element;
+
+      setTimeout(() => {
+        content.classList.add("animate-scale-pulse");
+        setTimeout(() => {
+          content.classList.remove("animate-scale-pulse");
+        }, 500);
+      }, 1800);
+    }
+  };
+
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
@@ -12,8 +32,8 @@ const Hero = () => {
             style={{ backgroundImage: "url(/hero.jpg)" }}
           >
             {/* Gradient overlay on the image area */}
-            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/2 to-transparent"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/2 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent via-25% to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent via-25% to-transparent"></div>
           </div>
         </div>
 
@@ -25,8 +45,8 @@ const Hero = () => {
             style={{ backgroundImage: "url(/hero.jpg)" }}
           >
             {/* Gradient overlay on the image area */}
-            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/2 to-transparent"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/2 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent via-25% to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent via-25% to-transparent"></div>
           </div>
         </div>
 
@@ -48,13 +68,22 @@ const Hero = () => {
                 opportunities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <button className="btn border bg-background_6 dark:bg-background_6">
+                <button
+                  onClick={() => scrollToSection("join")}
+                  className="btn border bg-background_6 dark:bg-background_6"
+                >
                   Join the Network
                 </button>
-                <button className="btn border bg-background_4 dark:bg-background_4">
+                <button
+                  onClick={() => scrollToSection("join")}
+                  className="btn border bg-background_4 dark:bg-background_4"
+                >
                   Become a Mentor
                 </button>
-                <button className="btn border bg-background_5 dark:bg-background_5">
+                <button
+                  onClick={() => scrollToSection("events")}
+                  className="btn border bg-background_5 dark:bg-background_5"
+                >
                   Explore Activities
                 </button>
               </div>

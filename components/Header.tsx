@@ -36,6 +36,26 @@ const Header = () => {
     }
   };
 
+  const scrollToSection = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+
+      const content =
+        element.querySelector(".section-pulse-target") ||
+        element.querySelector(".container") ||
+        element;
+
+      setTimeout(() => {
+        content.classList.add("animate-scale-pulse");
+        setTimeout(() => {
+          content.classList.remove("animate-scale-pulse");
+        }, 500);
+      }, 1800);
+    }
+  };
+
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 text-background_3 dark:text-background_3 bg-background/80 backdrop-blur-sm bg-purple-950/10 dark:bg-purple-950/10 border-b border-border animate-slideDown">
@@ -58,12 +78,7 @@ const Header = () => {
               href="#about"
               className="text-sm text-background_3 dark:text-background_3 hover:text-foreground transition-colors"
               scroll={false}
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .querySelector("#about")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={(e) => scrollToSection(e, "#about")}
             >
               About
             </Link>
@@ -71,12 +86,7 @@ const Header = () => {
               href="#events"
               className="text-sm text-background_3 dark:text-background_3 hover:text-foreground transition-colors"
               scroll={false}
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .querySelector("#events")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={(e) => scrollToSection(e, "#events")}
             >
               Events
             </Link>
@@ -84,12 +94,7 @@ const Header = () => {
               href="#team"
               className="text-sm text-background_3 dark:text-background_3 hover:text-foreground transition-colors"
               scroll={false}
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .querySelector("#team")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={(e) => scrollToSection(e, "#team")}
             >
               Team
             </Link>
@@ -97,12 +102,7 @@ const Header = () => {
               href="#join"
               className="text-sm text-background_3 dark:text-background_3 hover:text-foreground transition-colors"
               scroll={false}
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .querySelector("#join")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={(e) => scrollToSection(e, "#join")}
             >
               Join
             </Link>
@@ -110,12 +110,7 @@ const Header = () => {
               href="#contact us"
               className="text-sm text-background_3 dark:text-background_3 hover:text-foreground transition-colors"
               scroll={false}
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .querySelector("#contact")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={(e) => scrollToSection(e, "#contact")}
             >
               Contact
             </Link>

@@ -128,14 +128,14 @@ const Events = () => {
             <div
               key={index}
               onClick={() => handleEventClick(event.folder)}
-              className="p-6 bg-background rounded-xl border border-border hover:border-primary/30 transition-colors cursor-pointer group"
+              className="p-6 bg-background rounded-xl border border-border hover:border-primary/30  transition-transform duration-300 hover:scale-107 cursor-pointer group active:scale-125"
             >
               <div className="flex items-start justify-between mb-2">
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-1 group-hover:text-bgbd transition-colors">
                   {event.title}
                 </h3>
                 <svg
-                  className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors"
+                  className="w-5 h-5 text-bgbd  "
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -167,7 +167,7 @@ const Events = () => {
             {/* Close Button */}
             <button
               onClick={closeGallery}
-              className="absolute -top-12 right-0 text-white hover:text-primary transition-colors"
+              className="absolute -top-12 right-0 text-white hover:text-primary  transition-transform duration-300 hover:scale-125"
               aria-label="Close gallery"
             >
               <svg
