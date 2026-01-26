@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -9,6 +11,12 @@ html {
   --color-background: var(--background);
   --color-background_2: var(--background_2);
   --color-background_3: var(--background_3);
+  --color-background_4: var(--background_4);
+  --color-background_5: var(--background_5);
+  --color-background_6: var(--background_6);
+  --color-header_1: var(--header_1);
+
+
   --color-white: var(--white);
   --color-bgbd: var(--bgbd);
 
@@ -27,7 +35,12 @@ html {
   --white: hwb(0 100% 0%);
   --background: #edebf0;
   --background_2: #D0CBD8;
-  --background_3: #512c77;
+  --background_3: #603986;
+  --background_4: #7a4baa;
+  --background_5: #9963cf;
+  --background_6: #603986;
+  --header_1: #603986;
+
   --foreground: #070606;
   --primary: #562a81;
   --border: #e5e5e5;
@@ -39,6 +52,11 @@ html {
 .dark {
   --Ptext: #ffffff;
   --bgbd: #562a81;
+  --background_3: #ffffff;
+  --background_4: #7a4baa;
+  --background_5: #9963cf;
+  --background_6: #603986;
+  --header_1: #603986;
 
   --background: #77698C;
   --foreground: #ffffff;
@@ -51,8 +69,45 @@ html {
 body {
   position: relative;
   min-height: 100vh;
-}
+  font-family: 'Inter', sans-serif;
 
-
+}  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
 
   /* --background: #edebf0; */
+
+/* Animations */
+@layer utilities {
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes blurIn {
+    from {
+      filter: blur(20px);
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      filter: blur(0);
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-slideDown {
+    animation: slideDown 0.6s ease-out;
+  }
+
+  .animate-blurIn {
+    animation: blurIn 1s ease-out;
+  }
+}

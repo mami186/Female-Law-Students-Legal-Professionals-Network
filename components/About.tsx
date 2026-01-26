@@ -6,9 +6,9 @@ const About = () => {
       <div className="container mx-auto max-w-6xl flex flex-col lg:flex-row gap-12">
         {/* About Section */}
         <div className="text-center lg:text-left flex-1">
-          <h3 className="font-serif text-4xl md:text-5xl font-semibold mb-6">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-6">
             About Us
-          </h3>
+          </h2>
 
           <p className="leading-relaxed text-foreground/70 max-w-3xl mx-auto lg:mx-0">
             The Female Law Students and Legal Professionals Network, Haramaya
@@ -25,16 +25,16 @@ const About = () => {
           </p>
 
           <p className="leading-relaxed text-foreground/70 max-w-3xl mx-auto lg:mx-0 mt-4">
-            In 2025, the Network is being relaunched with a range of impactful
+            In 2025, the Network is being relaunched with range of impactful
             activities.
           </p>
         </div>
 
         {/* Goals Section */}
         <div className="flex-1">
-          <h3 className="font-serif text-4xl md:text-5xl font-semibold text-center mb-10">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-center mb-10">
             Our Goals
-          </h3>
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-4">
             {[

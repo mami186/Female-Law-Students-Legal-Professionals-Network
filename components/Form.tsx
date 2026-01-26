@@ -5,10 +5,10 @@ const Form = () => {
     <div className="container mx-auto max-w-6xl">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h3 className="font-serif text-4xl md:text-5xl text-center md:text-center lg:text-left font-semibold text-foreground mb-6">
+          <h2 className="font-serif text-4xl md:text-5xl text-center md:text-center lg:text-left font-semibold mb-6">
             Ready to Join?
-          </h3>
-          <p className="text-muted-foreground mb-6 leading-relaxed">
+          </h2>
+          <p className=" mb-6 leading-relaxed">
             Membership is open to female law students and young legal
             professionals who want to grow academically, professionally, and
             personally.
@@ -32,9 +32,9 @@ const Form = () => {
         </div>
 
         <div className="bg-background/50 backdrop-blur-sm rounded-2xl border border-border px-8 py-5">
-          <h3 className="font-serif text-3xl font-semibold text-foreground mb-6 text-center">
+          <h2 className="font-serif text-3xl font-semibold text-foreground mb-6 text-center">
             Join us now
-          </h3>
+          </h2>
 
           <form className="space-y-4">
             <div className="grid sm:grid-cols-2 gap-4">

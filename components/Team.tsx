@@ -20,9 +20,9 @@ const Team = () => {
     <>
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h3 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-4">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-4">
             Meet Our Team
-          </h3>
+          </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             The dedicated leaders driving our mission forward
           </p>
@@ -41,16 +41,16 @@ const Team = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h4 className="font-serif text-xl font-semibold text-white">
+                <h3 className="font-serif text-xl font-semibold text-white">
                   {member.role}
-                </h4>
+                </h3>
               </div>
             </div>
           ))}
         </div>
 
         <div className="mt-20">
-          <h3 className="font-serif text-3xl font-semibold text-foreground mb-8 text-center">
+          <h3 className="font-serif text-4xl font-semibold text-foreground mb-8 text-center">
             Executives
           </h3>
           <div className="flex overflow-x-auto gap-4 pb-8 snap-x snap-mandatory scrollbar-hide">
@@ -104,9 +104,9 @@ const Team = () => {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h4 className="font-serif text-sm font-semibold text-white leading-tight">
+                  <h3 className="font-serif text-sm font-semibold text-white leading-tight">
                     {exec.role}
-                  </h4>
+                  </h3>
                 </div>
               </div>
             ))}
