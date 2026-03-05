@@ -52,9 +52,9 @@ const Team = () => {
           {team.map((member, index) => {
             // Determine animation direction based on position
             const getAnimationProps = (idx: number) => {
-              if (idx === 0) return { initial: { opacity: 0, x: -100 }, animate: { opacity: 1, x: 0 } }; // Left
-              if (idx === 1) return { initial: { opacity: 0, y: 100 }, animate: { opacity: 1, y: 0 } }; // Center (bottom)
-              return { initial: { opacity: 0, x: 100 }, animate: { opacity: 1, x: 0 } }; // Right
+              if (idx === 0) return { initial: { opacity: 0, x: -80 }, animate: { opacity: 1, x: 0 } }; // Left
+              if (idx === 1) return { initial: { opacity: 0, y: 80 }, animate: { opacity: 1, y: 0 } }; // Center (bottom)
+              return { initial: { opacity: 0, x: 80 }, animate: { opacity: 1, x: 0 } }; // Right
             };
             
             const animationProps = getAnimationProps(index);
@@ -65,7 +65,7 @@ const Team = () => {
                 initial={animationProps.initial}
                 whileInView={animationProps.animate}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
+                transition={{ duration: 0.4, delay: 0.05 * index }}
                 className="group relative overflow-hidden rounded-[48px] border-2 border-transparent transition-all duration-500 cursor-pointer shadow-xl aspect-3/4 hover:border-[var(--bgbd)]/30 dark:hover:border-[var(--bgbd)]/50"
                 whileHover={{ scale: 1.05, y: -10 }}
                 whileTap={{ scale: 0.95 }}
@@ -153,7 +153,7 @@ const Team = () => {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: 1.0 + (0.05 * index) }}
+                transition={{ duration: 0.3, delay: 0.03 * index }}
                 className="min-w-[45%] md:min-w-[19%] snap-center group relative overflow-hidden rounded-[48px] border-2 border-transparent transition-all duration-500 cursor-pointer shadow-xl aspect-3/4 shrink-0 hover:border-[var(--bgbd)]/30 dark:hover:border-[var(--bgbd)]/50"
                 whileHover={{ scale: 1.05, y: -10 }}
                 whileTap={{ scale: 0.95 }}

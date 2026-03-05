@@ -147,9 +147,9 @@ const Events = () => {
           {eventFolders.map((event, index) => {
             // Determine animation direction based on position
             const getAnimationProps = (idx: number) => {
-              if (idx === 0) return { initial: { opacity: 0, x: -100 }, animate: { opacity: 1, x: 0 } }; // Left
-              if (idx === 1) return { initial: { opacity: 0, y: 100 }, animate: { opacity: 1, y: 0 } }; // Center (bottom)
-              return { initial: { opacity: 0, x: 100 }, animate: { opacity: 1, x: 0 } }; // Right
+              if (idx === 0) return { initial: { opacity: 0, x: -80 }, animate: { opacity: 1, x: 0 } }; // Left
+              if (idx === 1) return { initial: { opacity: 0, y: 80 }, animate: { opacity: 1, y: 0 } }; // Center (bottom)
+              return { initial: { opacity: 0, x: 80 }, animate: { opacity: 1, x: 0 } }; // Right
             };
             
             const animationProps = getAnimationProps(index);
@@ -160,7 +160,7 @@ const Events = () => {
                 initial={animationProps.initial}
                 whileInView={animationProps.animate}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
+                transition={{ duration: 0.4, delay: 0.05 * index }}
                 className="relative"
               >
                 <EventCard
