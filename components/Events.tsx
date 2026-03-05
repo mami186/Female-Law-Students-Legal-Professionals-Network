@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { eventImageMap } from "@/data/eventImages";
+import { getEventImagesSync } from "@/utils/eventUtils";
 import EventCard from "@/components/ui/EventCard";
 
 // Define event folders with their details
@@ -54,6 +54,11 @@ const eventFolders = [
     subtitle: "New Member Orientation",
     folder: "wellcome program",
   },
+  {
+    title: "16 days of activism",
+    subtitle: "Campaign ",
+    folder: "16 days of activism",
+  },
 ];
 
 const Events = () => {
@@ -63,7 +68,7 @@ const Events = () => {
 
   // Function to get images from a folder
   const getImagesFromFolder = (folderName: string): string[] => {
-    return eventImageMap[folderName] || [];
+    return getEventImagesSync(folderName);
   };
 
   const handleEventClick = (folderName: string) => {

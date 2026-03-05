@@ -153,5 +153,12 @@ export const eventImageMap: Record<string, string[]> = {
     "/Events/wellcome program/photo_4_2026-01-07_18-10-05.jpg",
     "/Events/wellcome program/photo_4_2026-01-07_18-20-48.jpg",
     "/Events/wellcome program/photo_5_2026-01-07_18-10-05.jpg"
+  ],
+  "16 days of activism": [
+    "/Events/16 days of activism/photo_1_2026-01-07_18-25-37.jpg",
+    "/Events/16 days of activism/photo_2_2026-01-07_18-25-37.jpg",
+    "/Events/16 days of activism/photo_3_2026-01-07_18-25-37.jpg",
+    "/Events/16 days of activism/photo_4_2026-01-07_18-25-37.jpg",
+    "/Events/16 days of activism/photo_5_2026-01-07_18-25-37.jpg"
   ]
 };

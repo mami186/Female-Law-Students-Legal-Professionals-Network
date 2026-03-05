@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { MapPin, ArrowUpRight, Calendar } from "lucide-react";
-import { eventImageMap } from "@/data/eventImages";
+import { getEventImagesSync } from "@/utils/eventUtils";
 
 interface EventCardProps {
   title: string;
@@ -22,17 +22,21 @@ export default function EventCard({
   zoneIndex = 0,
 }: EventCardProps) {
   // Get first image from the event folder
-  const eventImages = eventImageMap[folder] || [];
+  const eventImages = getEventImagesSync(folder);
   const firstImage = eventImages[0] || "/hero.jpg"; // fallback image
 
   // Determine event status based on title or subtitle
   const getEventStatus = (title: string, subtitle: string) => {
-    if (title.toLowerCase().includes("training") || subtitle.toLowerCase().includes("training")) return "Training";
-    if (title.toLowerCase().includes("launch") || subtitle.toLowerCase().includes("launch")) return "Launch";
-    if (title.toLowerCase().includes("relaunch")) return "Relaunch";
-    if (title.toLowerCase().includes("awareness")) return "Awareness";
-    if (title.toLowerCase().includes("international")) return "International";
-    if (title.toLowerCase().includes("welcome")) return "Welcome";
+    const safeTitle = title || "";
+    const safeSubtitle = subtitle || "";
+    
+    if (safeTitle.toLowerCase().includes("training") || safeSubtitle.toLowerCase().includes("training")) return "Training";
+    if (safeTitle.toLowerCase().includes("launch") || safeSubtitle.toLowerCase().includes("launch")) return "Launch";
+    if (safeTitle.toLowerCase().includes("relaunch")) return "Relaunch";
+    if (safeTitle.toLowerCase().includes("awareness")) return "Awareness";
+    if (safeTitle.toLowerCase().includes("international")) return "International";
+    if (safeTitle.toLowerCase().includes("welcome")) return "Welcome";
+    if (safeTitle.toLowerCase().includes("activism")) return "Activism";
     return "Event";
   };
 
@@ -40,7 +44,8 @@ export default function EventCard({
 
   // Extract date from subtitle if available
   const extractDate = (subtitle: string) => {
-    const dateMatch = subtitle.match(/\b(20\d{2}|January|February|March|April|May|June|July|August|September|October|November|December)\b/i);
+    const safeSubtitle = subtitle || "";
+    const dateMatch = safeSubtitle.match(/\b(20\d{2}|January|February|March|April|May|June|July|August|September|October|November|December)\b/i);
     return dateMatch ? dateMatch[0] : "2025";
   };
 
