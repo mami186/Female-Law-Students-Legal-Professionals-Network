@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Events from "@/components/Events";
 import Team from "@/components/Team";
+import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 export default function Home() {
   return (
@@ -14,38 +15,45 @@ export default function Home() {
 
         <Hero />
 
-        <section
+        <AnimatedSection
           id="about"
-          className="py-18 px-6 sm:py-8 md:py-12  bg-bgsh1 dark:bg-bgsh1"
+          className="py-18 px-6 sm:py-8 md:py-12 bg-bgsh1 dark:bg-bgsh1"
+          delay={0.2}
         >
           <About />
-        </section>
+        </AnimatedSection>
 
-        {/* <section id="activities" className="py-24 px-6 bg-white ">
-          <Activity />
-        </section> */}
-
-        <section id="events" className="py-24 px-6 bg-bgsh2 ">
+        <AnimatedSection
+          id="events"
+          className="py-24 px-6 bg-bgsh2"
+          delay={0.4}
+        >
           <Events />
-        </section>
+        </AnimatedSection>
 
-        <section
+        <AnimatedSection
           id="team"
-          className="py-24 px-6 lg:pt-18 lg:pb-24 bg-bgsh1 dark:bg-bgsh1 "
+          className="py-24 px-6 lg:pt-18 lg:pb-24 bg-bgsh1 dark:bg-bgsh1"
+          delay={0.6}
         >
           <Team />
-        </section>
+        </AnimatedSection>
 
-        <section
+        <AnimatedSection
           id="join"
-          className="py-10 px-6 lg:py-18 text-foreground bg-bgsh2   "
+          className="py-10 px-6 lg:py-18 text-foreground bg-bgsh2"
+          delay={0.8}
         >
           <Form />
-        </section>
+        </AnimatedSection>
 
-        <section id="contact" className=" text-Ptext dark:text-Ptext bg-footer_1  ">
+        <AnimatedSection
+          id="contact"
+          className="text-Ptext bg-footer_1 dark:text-Ptext"
+          delay={1.0}
+        >
           <Footer />
-        </section>
+        </AnimatedSection>
       </div>
     </>
   );

@@ -32,12 +32,8 @@ html {
   --color-muted-foreground: var(--muted-foreground);
 }
 
-/* Global transition for theme switching */
-*, *::before, *::after {
-  transition-property: background-color, border-color, color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-}
+
+
 
 :root {
   --Ptext: #ffffff;
@@ -66,9 +62,9 @@ html {
 .dark {
   --Ptext: #ffffff;
   --bgbd: #562a81;
-  --bgsh1: #311c46;
-  --bgsh2: #3d2e55;
-  --footer_1: #3d2e55;
+  --bgsh1: #121212;
+  --bgsh2: #272727;
+  --footer_1: #000000;
 
 
   --background_3: #ffffff;
@@ -77,7 +73,7 @@ html {
   --background_6: #603986;
   --header_1: #603986;
 
-  --background: #77698C;
+  --background: #121212;
   --foreground: #ffffff;
   --primary: #562a81;
   --border: #262626;
@@ -96,47 +92,3 @@ body {
 
   /* --background: #edebf0; */
 
-/* Animations */
-@layer utilities {
-  @keyframes slideDown {
-    from {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes blurIn {
-    from {
-      filter: blur(20px);
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      filter: blur(0);
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  .animate-slideDown {
-    animation: slideDown 0.6s ease-out;
-  }
-
-  .animate-blurIn {
-    animation: blurIn 1s ease-out;
-  }
-
-  @keyframes scalePulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
-
-  .animate-scale-pulse {
-    animation: scalePulse 0.5s ease-in-out;
-  }
-}
