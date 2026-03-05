@@ -64,13 +64,27 @@ export default function EventCard({
       onClick={handleQuickView}
       className="group relative h-[520px] rounded-[48px] overflow-hidden border-2 border-transparent transition-all duration-500 cursor-pointer shadow-xl hover:border-[var(--bgbd)]/30 dark:hover:border-[var(--bgbd)]/50"
     >
-      {/* Background Image */}
+      {/* Background Image/Video */}
       <div className="absolute inset-0">
-        <img
-          src={firstImage}
-          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-          alt={title}
-        />
+        {firstImage.toLowerCase().endsWith('.mp4') || 
+         firstImage.toLowerCase().endsWith('.mov') || 
+         firstImage.toLowerCase().endsWith('.avi') || 
+         firstImage.toLowerCase().endsWith('.webm') ? (
+          <video
+            src={firstImage}
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          <img
+            src={firstImage}
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt={title}
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent dark:from-bgsh1/80 dark:via-bgsh1/20 to-transparent"></div>
       </div>
 

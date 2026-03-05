@@ -178,33 +178,39 @@ export const getEventImagesSync = (folderName: string): string[] => {
     return knownEventImages[folderName];
   }
 
-  // For new folders, try to detect common image patterns
-  const detectedImages = detectCommonImages(folderName);
+  // For new folders, try to detect common image and video patterns
+  const detectedMedia = detectCommonMedia(folderName);
   
-  if (detectedImages.length > 0) {
-    imageCache.set(folderName, detectedImages);
-    return detectedImages;
+  if (detectedMedia.length > 0) {
+    imageCache.set(folderName, detectedMedia);
+    return detectedMedia;
   }
 
   // Final fallback
-  console.warn(`No images found for folder: ${folderName}, using fallback`);
+  console.warn(`No media found for folder: ${folderName}, using fallback`);
   return ["/hero.jpg"];
 };
 
-// Detect common image patterns in a folder
-const detectCommonImages = (folderName: string): string[] => {
+// Detect common image and video patterns in a folder
+const detectCommonMedia = (folderName: string): string[] => {
   const commonPatterns = [
-    'IMG_', 'photo_', 'image_', 'img_', 'Picture', 'DSC_', 'P_'
+    'IMG_', 'photo_', 'image_', 'img_', 'Picture', 'DSC_', 'P_',
+    'VID_', 'video_', 'mov_', 'clip_', 'movie_'
   ];
   
-  const extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
-  const detectedImages: string[] = [];
+  // Common image file extensions
+  const IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+
+  // Common video file extensions  
+  const VIDEO_EXTENSIONS = ['.mp4', '.mov', '.avi', '.mkv', '.webm', '.m4v', '.3gp'];
+  
+  const detectedMedia: string[] = [];
   
   // This is a simplified approach - in production, you'd use server-side file scanning
   // For now, we'll return empty and let the fallback handle it
   // The user can add new folders and they'll be detected when they add the folder name to eventFolders
   
-  return detectedImages;
+  return detectedMedia;
 };
 
 // Function to add new event images dynamically (call this when you add new folders)

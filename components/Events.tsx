@@ -213,16 +213,32 @@ const Events = () => {
               </svg>
             </button>
 
-            {/* Image Display */}
+            {/* Media Display */}
             <div className="relative aspect-video bg-black/50 rounded-lg overflow-hidden">
               {galleryImages.length > 0 && (
-                <Image
-                  src={galleryImages[selectedImageIndex]}
-                  alt={`Event image ${selectedImageIndex + 1}`}
-                  fill
-                  className="object-contain"
-                  unoptimized
-                />
+                <>
+                  {galleryImages[selectedImageIndex].toLowerCase().endsWith('.mp4') || 
+                   galleryImages[selectedImageIndex].toLowerCase().endsWith('.mov') || 
+                   galleryImages[selectedImageIndex].toLowerCase().endsWith('.avi') || 
+                   galleryImages[selectedImageIndex].toLowerCase().endsWith('.webm') ? (
+                    <video
+                      src={galleryImages[selectedImageIndex]}
+                      className="w-full h-full object-contain"
+                      controls
+                      autoPlay
+                      muted
+                      playsInline
+                    />
+                  ) : (
+                    <Image
+                      src={galleryImages[selectedImageIndex]}
+                      alt={`Event image ${selectedImageIndex + 1}`}
+                      fill
+                      className="object-contain"
+                      unoptimized
+                    />
+                  )}
+                </>
               )}
             </div>
 
@@ -275,7 +291,7 @@ const Events = () => {
 
             {/* Thumbnail Strip */}
             <div className="flex gap-2 mt-4 overflow-x-auto pb-2 scrollbar-hide">
-              {galleryImages.map((img, idx) => (
+              {galleryImages.map((media, idx) => (
                 <div
                   key={idx}
                   onClick={() => setSelectedImageIndex(idx)}
@@ -285,13 +301,34 @@ const Events = () => {
                       : "border-transparent hover:border-white/50"
                   }`}
                 >
-                  <Image
-                    src={img}
-                    alt={`Thumbnail ${idx + 1}`}
-                    fill
-                    className="object-cover rounded"
-                    unoptimized
-                  />
+                  {media.toLowerCase().endsWith('.mp4') || 
+                   media.toLowerCase().endsWith('.mov') || 
+                   media.toLowerCase().endsWith('.avi') || 
+                   media.toLowerCase().endsWith('.webm') ? (
+                    <div className="relative w-full h-full bg-black/30 rounded flex items-center justify-center">
+                      <div className="absolute inset-0">
+                        <video
+                          src={media}
+                          className="w-full h-full object-cover rounded"
+                          muted
+                          playsInline
+                        />
+                      </div>
+                      <div className="absolute inset-0 bg-black/40 rounded flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  ) : (
+                    <Image
+                      src={media}
+                      alt={`Thumbnail ${idx + 1}`}
+                      fill
+                      className="object-cover rounded"
+                      unoptimized
+                    />
+                  )}
                 </div>
               ))}
             </div>
