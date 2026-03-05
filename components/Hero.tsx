@@ -70,7 +70,7 @@ const Hero = () => {
         </div>
 
         {/* Content */}
-        <div className="grid lg:grid-cols-[2fr_1fr] md:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="grid lg:grid-cols-[2fr_1fr] md:grid-cols-2 gap-12 items-center relative z-10 mb-90">
           {/* Content on the left */}
           <motion.div 
             className="text-center md:text-left py-12"
@@ -105,7 +105,7 @@ const Hero = () => {
             </motion.p>
             
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+              className="flex flex-row gap-2 sm:gap-4 justify-center md:justify-start items-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.3 }}
@@ -114,7 +114,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection("join")}
-                className="btn border bg-background_6 dark:bg-background_6"
+                className="btn border bg-background_6 dark:bg-background_6 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 w-fit sm:w-auto"
               >
                 Join the Network
               </motion.button>
@@ -122,7 +122,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection("join")}
-                className="btn border bg-background_4 dark:bg-background_4"
+                className="btn border bg-background_4 dark:bg-background_4 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 w-fit sm:w-auto"
               >
                 Become a Mentor
               </motion.button>
@@ -130,7 +130,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection("events")}
-                className="btn border bg-background_5 dark:bg-background_5"
+                className="btn border bg-background_5 dark:bg-background_5 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 w-fit sm:w-auto"
               >
                 Explore Activities
               </motion.button>

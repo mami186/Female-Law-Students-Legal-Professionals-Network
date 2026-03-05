@@ -162,7 +162,8 @@ const knownEventImages: Record<string, string[]> = {
     "/Events/16 days of activism/IMG_2160.jpg",
     "/Events/16 days of activism/IMG_2337.jpg",
     "/Events/16 days of activism/clothing .jpg",
-    "/Events/16 days of activism/opening .jpg"
+    "/Events/16 days of activism/opening .jpg",
+    "/Events/16 days of activism/video.mp4"
   ]
 };
 
