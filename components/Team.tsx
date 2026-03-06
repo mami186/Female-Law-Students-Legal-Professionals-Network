@@ -12,6 +12,14 @@ const Team = () => {
       role: "President",
       image: "/President.jpg",
     },
+    {
+      role: "Vice President",
+      image: "/vice president.jpg",
+    },
+    {
+      role: "Secretary",
+      image: "/secretary.jpg",
+    },
 
   ];
 
@@ -108,14 +116,7 @@ const Team = () => {
           </motion.h3>
           <div className="flex overflow-x-auto gap-4 pb-8 snap-x snap-mandatory scrollbar-hide">
             {[
-              {
-                role: "Vice President",
-                image: "/vice president.jpg",
-              },
-              {
-                role: "Secretary",
-                image: "/secretary.jpg",
-              },
+              
               {
                 role: "Program Lead",
                 image: "/program leader.jpg",
