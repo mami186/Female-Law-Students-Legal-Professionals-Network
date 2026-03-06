@@ -12,10 +12,7 @@ const Team = () => {
       role: "President",
       image: "/President.jpg",
     },
-    {
-      role: "Vice President",
-      image: "/secretary.jpg",
-    },
+
   ];
 
   return (
@@ -48,7 +45,7 @@ const Team = () => {
           </motion.p>
         </motion.div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {team.map((member, index) => {
             // Determine animation direction based on position
             const getAnimationProps = (idx: number) => {
@@ -112,8 +109,12 @@ const Team = () => {
           <div className="flex overflow-x-auto gap-4 pb-8 snap-x snap-mandatory scrollbar-hide">
             {[
               {
-                role: "Secretary",
+                role: "Vice President",
                 image: "/vice president.jpg",
+              },
+              {
+                role: "Secretary",
+                image: "/secretary.jpg",
               },
               {
                 role: "Program Lead",

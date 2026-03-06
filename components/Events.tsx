@@ -58,7 +58,11 @@ const eventFolders = [
     title: "16 days of activism",
     subtitle: "Campaign ",
     folder: "16 days of activism",
-  },
+  },{
+    title: "Warka Wellness Session Cascade",
+    subtitle: "Wellness Session",
+    folder: "warka wellness session cascade",
+  }
 ];
 
 const Events = () => {

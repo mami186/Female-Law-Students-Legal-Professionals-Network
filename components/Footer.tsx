@@ -50,6 +50,14 @@ export const Footer = () => {
               >
                 <IoMdMail className="transition-transform duration-200 ease-in-out hover:scale-125" />
               </a>
+                            <a
+                href="https://www.linkedin.com/company/female-law-students-and-legal-professionals-network/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <ImLinkedin className="transition-transform duration-200 ease-in-out hover:scale-125" />
+              </a>
             </div>
           </div>
 

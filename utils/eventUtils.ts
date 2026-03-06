@@ -164,6 +164,10 @@ const knownEventImages: Record<string, string[]> = {
     "/Events/16 days of activism/clothing .jpg",
     "/Events/16 days of activism/opening .jpg",
     "/Events/16 days of activism/video.mp4"
+  ],
+  "warka wellness session cascade": [
+    "/Events/Warka Wellness Session Cascade /IMG_3205.jpg",
+    "/Events/Warka Wellness Session Cascade /IMG_3207.jpg"
   ]
 };
 
